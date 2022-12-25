@@ -82,6 +82,7 @@ main {
         grid-row-start: 1;
         grid-row-end: 2;
         max-width: 33.75rem;
+        padding-top: 8rem;
         
     }
     .description span{
