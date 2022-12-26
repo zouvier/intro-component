@@ -65,15 +65,26 @@ main {
 
 }
 
+label {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
 @media (min-width: 764px) {
-    
+
 
     .info {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 6.25rem 1fr;
         column-gap: 2.813rem;
-       
+
     }
 
     .description {
@@ -83,9 +94,10 @@ main {
         grid-row-end: 2;
         max-width: 33.75rem;
         padding-top: 8rem;
-        
+
     }
-    .description span{
+
+    .description span {
         font-size: 3.125rem;
         font-weight: 700;
     }
@@ -98,7 +110,7 @@ main {
         max-height: 4.75rem;
         max-width: 33.75rem;
         padding: 1.125rem 7.25rem 1.125rem 7.25rem;
-        
+
     }
 
     .make-account {
@@ -115,14 +127,16 @@ main {
     body {
         background-image: url("../images/bg-intro-mobile.png");
     }
+
     .description span {
         font-size: 1.75rem;
         line-height: 1.5;
         font-weight: 700;
-    
-    
+
+
     }
-    .pricing{
+
+    .pricing {
         padding: 1.125rem 4.25rem 1.125rem 4.25rem;
     }
 }
@@ -146,7 +160,7 @@ main {
     margin: 0 auto;
     color: white;
     background-color: #5E54A4;
-    
+
     border-radius: 0.625rem;
 
 }
@@ -163,13 +177,13 @@ main {
     box-shadow: 0rem 0.2rem 0.2rem 0rem gray;
 }
 
- .warning {
+.warning {
     position: relative;
-    
+
     visibility: hidden;
 }
 
- .warning{
+.warning {
     position: absolute;
     font-size: 0.625rem;
     color: hsl(0, 100%, 74%);
@@ -210,15 +224,15 @@ main {
     background-position: right;
     padding-right: 1rem;
     background-origin: content-box;
-    
+
 }
 
-#input div{
+#input div {
     width: 85%;
     position: relative;
 }
 
-#input input:invalid{
+#input input:invalid {
     border-color: hsl(0, 100%, 74%);
 }
 
@@ -237,10 +251,11 @@ main {
     box-shadow: 0rem 0.1rem 0.1rem 0rem #165f3f;
 }
 
-#submit:active{
+#submit:active {
     transform: scale(0.99) perspective(0.006rem);
 }
 
-#submit:hover, #submit:focus-visible{
+#submit:hover,
+#submit:focus-visible {
     background-color: #165f3f;
 }

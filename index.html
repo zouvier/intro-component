@@ -10,8 +10,6 @@
   <link href="./css/styles.css" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-
-
   <title>Frontend Mentor | Intro component with sign up form</title>
 
 </head>
@@ -35,23 +33,27 @@
         <form id="input" name="input" method="post">
 
           <div>
-            <input type="text" id="fname" name="fname" minlength="1"  placeholder="First Name">
-              <p id="fwarning" class="warning" aria-live="polite">First name must be at least 1 character long</p>
+            <input type="text" id="fname" name="fname" minlength="1" aria-describedby="fwarning" placeholder="First Name">
+            <label for="fname">First Name</label>
+              <p id="fwarning" class="warning" aria-live="assertive">First name must be at least 1 character long</p>
           </div>
 
           <div>
-            <input type="text" id="lname" name="lname" minlength="1"  placeholder="Last Name">
-              <p id="lwarning" class="warning" aria-live="polite">Last name must be at least 1 character long</p>
+            <input type="text" id="lname" name="lname" minlength="1" aria-describedby="lwarning" placeholder="Last Name">
+            <label for="lname">Last Name</label>
+              <p id="lwarning" class="warning" aria-live="assertive">Last name must be at least 1 character long</p>
           </div>
 
           <div>
-            <input type="email" id="email" name="email"  placeholder="Email Address">
-              <p id="ewarning" class="warning" aria-live="polite" >Email format is not correct</p>
+            <input type="email" id="email" name="email" aria-describedby="ewarning" placeholder="Email Address">
+            <label for="email">Email</label>
+              <p id="ewarning" class="warning" aria-live="assertive" >Email format is not correct</p>
           </div>
 
           <div>
-            <input type="password" id="password" name="password" minlength="6"  placeholder="Password">
-              <p id="pwarning" class="warning" aria-live="polite">Password must be at least 6 characters long</p>
+            <input type="password" id="password" name="password" minlength="6"  aria-describedby="pwarning" placeholder="Password">
+            <label for="fname">password</label>
+              <p id="pwarning" class="warning" aria-live="assertive">Password must be at least 6 characters long</p>
           </div>
 
           <input type="submit" id="submit" onclick="return validateForm()" value="Claim your free trial">
