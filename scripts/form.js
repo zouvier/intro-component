@@ -1,19 +1,27 @@
 
-function validateForm() {
-    let state = true;
-    
+
+function validateForm(event) {
+    console.log(event.target[0].style)
     const values = {
-        fname: document.forms["input"]["fname"].value,
-        lname: document.forms["input"]["lname"].value,
-        email: document.forms["input"]["email"].value,
-        password: document.forms["input"]["password"].value
+        fname: event.target[0].value,
+        lname: event.target[1].value,
+        email: event.target[2].value,
+        password: event.target[3].value
     };
-    for(let key in values ){
-        if(values[key] == false){
-            state=false;
-            document.getElementById(`${key[0]}warning`).style.visibility = "visible";
-            document.getElementById(key).style.backgroundImage = "url('./images/icon-error.svg')";
+
+    for (let key in values) {
+        let warning = document.getElementById(`${key[0]}warning`);
+        let iconError = document.getElementById(key);
+        if (values[key] == false && warning.className==='warning') {
+            warning.className = 'warning2'
+            iconError.className = 'icon-error'
         }
     }
-    return state
-};
+    event.preventDefault();
+
+
+}
+
+const form = document.getElementById('input');
+
+form.addEventListener('submit', validateForm)

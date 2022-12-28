@@ -84,6 +84,7 @@ label {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 6.25rem 1fr;
         column-gap: 2.813rem;
+        max-width: 67.5rem;
 
     }
 
@@ -92,12 +93,11 @@ label {
         grid-column-end: 1;
         grid-row-start: 1;
         grid-row-end: 2;
-        max-width: 33.75rem;
         padding-top: 8rem;
 
     }
 
-    .description span {
+    .description h1 {
         font-size: 3.125rem;
         font-weight: 700;
     }
@@ -107,9 +107,8 @@ label {
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 1;
-        max-height: 4.75rem;
-        max-width: 33.75rem;
-        padding: 1.125rem 7.25rem 1.125rem 7.25rem;
+        
+        padding: 2.125rem 4.25rem 1.125rem 4.25rem;
 
     }
 
@@ -118,7 +117,6 @@ label {
         grid-column-end: 2;
         grid-row-start: 2;
         grid-row-end: 2;
-        max-width: 33.75rem;
 
     }
 }
@@ -157,10 +155,9 @@ label {
 }
 
 .pricing {
-    margin: 0 auto;
     color: white;
     background-color: #5E54A4;
-
+    
     border-radius: 0.625rem;
 
 }
@@ -180,10 +177,12 @@ label {
 .warning {
     position: relative;
 
-    visibility: hidden;
+    display: none !important ;
 }
 
-.warning {
+
+.warning2 {
+    display: block;
     position: absolute;
     font-size: 0.625rem;
     color: hsl(0, 100%, 74%);
@@ -220,12 +219,17 @@ label {
     border-color: hsl(246, 25%, 77%);
     border-style: solid;
     text-indent: 1rem;
+}
+
+
+.icon-error{
     background-repeat: no-repeat;
     background-position: right;
     padding-right: 1rem;
     background-origin: content-box;
-
+    background-image: url('../images/icon-error.svg');
 }
+
 
 #input div {
     width: 85%;
@@ -234,6 +238,7 @@ label {
 
 #input input:invalid {
     border-color: hsl(0, 100%, 74%);
+   
 }
 
 
